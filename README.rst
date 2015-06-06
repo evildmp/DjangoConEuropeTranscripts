@@ -2,14 +2,16 @@
 DjangoConEuropeTranscripts
 ==========================
 
-Proceedings from DjangoCon Europe 2015
+Proceedings from DjangoCon Europe 2015.
+
+`Published on Read the Docs <http://djangoconeuropetranscripts.readthedocs.org>`_.
 
 How we should work
 ==================
 
 In the root of the GitHub repository:
 
-* .``docx`` files (such as ``Djangocon 31st May 15 Open Day FINAL.docx``) are the originals
+* ``.docx`` files (such as ``Djangocon 31st May 15 Open Day FINAL.docx``) are the originals
   provided by the STTRs - they should not be edited in any way
 * ``raw_transcript.txt`` files (such as ``open_day_raw_transcript.txt``) are plain text versions of
   the above - they should not be edited in any way

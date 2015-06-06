@@ -53,10 +53,10 @@ Structure
 Please use this directory/file structure so we can easily link from the published videos on Vimeo
 to each transcript:
 
-  * Transcripts
+  * /transcripts
 
     * ``index.rst``
-    * Open Day at Cardiff University
+    * /open_day
 
       * ``index.rst``
       * ``daniele_procida_welcome_to_djangocon.rst`` Daniele Procida: Welcome to DjangoCon Europe
@@ -66,7 +66,7 @@ to each transcript:
         Django?
       * and so on
 
-    * Talks Day One
+    * /talks_day_one
 
       * ``index.rst``
       * talk one
