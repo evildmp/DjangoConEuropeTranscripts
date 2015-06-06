@@ -7,7 +7,11 @@
 DjangoCon Europe 2015 - transcripts
 ===================================
 
-Contents:
+See the `Git repository <https://github.com/evildmp/DjangoConEuropeTranscripts>`_.
+
+
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
