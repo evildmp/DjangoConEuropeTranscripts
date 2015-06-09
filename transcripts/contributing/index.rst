@@ -16,10 +16,17 @@ presenters' slides and these transcripts will be an invaluable resource.
 There's a lot of work to do, but if each speaker takes a little time to submit a pull request with
 amendments for their own talk, the bulk of the work will be concluded very swiftly.
 
+Once the conference videos have been edited and published by `AOTV <http://aotv.co.uk>`_ the work
+to create final versions of the transcripts can begin in earnest.
+
+See also `Joachim Jablon's <https://github.com/ewjoachim/DjangoconSubtitles>`_ start on a project
+to turn the transcripts into synchronised video subtitles.
+
+
 How we should work
 ==================
 
-In the root of the GitHub repository:
+In the ``raw_files`` directory of the GitHub repository:
 
 * ``.docx`` files (such as ``Djangocon 31st May 15 Open Day FINAL.docx``) are the originals
   provided by the STTRs - they should not be edited in any way
