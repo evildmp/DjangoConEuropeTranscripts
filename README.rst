@@ -8,7 +8,7 @@ Proceedings from DjangoCon Europe 2015.
 
 See
 https://github.com/evildmp/DjangoConEuropeTranscripts/blob/master/transcripts/contributing/index.rst
- for guidance on how the files are structured and how you can contribute to creating the
+for guidance on how the files are structured and how you can contribute to creating the
 transcripts.
 
 Once the conference videos have been edited and published by `AOTV <http://aotv.co.uk>`_ the work
