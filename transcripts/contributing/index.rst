@@ -2,7 +2,7 @@
 How to help improve these transcripts
 =====================================
 
-DjangoCon Europe 2015 was supported by two text-to-speech reporters, Hilary Maclean and Sheryll
+DjangoCon Europe 2015 was supported by two speech-to-text reporters, Hilary Maclean and Sheryll
 Holley.
 
 We have been provided with a transcript of their output (so far, covering day one, the open day).
