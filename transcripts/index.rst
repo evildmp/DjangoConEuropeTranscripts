@@ -18,6 +18,8 @@ Contents
 
    contributing/index
    open_day/index
+   talks_day_one/index
+   talks_day_two/index
 
 
 
