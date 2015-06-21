@@ -2,41 +2,78 @@
 Rhiannon Titcomb: Understanding Bezier curves with Python
 =========================================================
 
-	 Before we set up the next speaker we're going to see if we can get the light system a bit better.  So with a little bit of pride and immense of pleasure I'm introducing Rhiannon, Rhiannon is a first year student at the school of mathematics and she is going to be telling you about how she uses Python to get a ticket to some here really.
+Before we set up the next speaker we're going to see if we can get the light system a bit better.  So with a little bit of pride and immense of pleasure I'm introducing Rhiannon, Rhiannon is a first year student at the school of mathematics and she is going to be telling you about how she uses Python to get a ticket to some here really.
+
 [adjusting laptop and projector] It is the frequency.
+
 Let's again, Rhiannon.
+
 RHIANNON TITCOMB:  Hi everyone, thank you for the opportunity to be here.  I am going the be talking to you about bézier curves today, I will tell you about who I am and I am here.
+
 I am Rhiannon; I am a student at Cardiff university and studying math.  I am first year, this year I had a module called computing for mathematics in which I was taught how the use Python and various other things.  This was my first look at coding, never done anything before, but I really loved it.
+
 So, I did a piece of course work in this module and I ended up winning a Djangocon ticket as a prize for doing well in the course work, so that is why I have got a ticket.
+
 (APPLAUSE).
+
 Thanks.  So, when I found out I could talk here, I thought it is a really great opportunity and I thought to make it easier on myself I would talk about what that course work was about because clearly it was good.
+
 So, I am talking about bézier curves today.  What is it?  Well they curves obviously and used a lot in the computer graphics and drawing and stuff on the computers.  I will show you a couple of examples.  So this is quite simple bézier curve and this is a slightly more complex looking bézier curve.  So to describe it, it is a curve starting at one point and ending at another and it is curvature is defined by control points which are movable and you can have as many as you wanted, that is what shapes it.
+
 So, why are they used?  Well they are the most intuitive for a user to draw in these programmes, they are very, it is easy to see where you can move them.
+
 Okay.  Yes, so, they are used a lot because they are really intuitive and to manipulate.  I will show you an example in a minute.  They are also really simple and quick for the computer to draw on, take it and compute it.
+
 So I will show you a quick example of drawing a bézier curve.  So, so there is a tool here that draws bézier curves, it is a control point and you can bend it and those are more control points you can see there I am moving it around and stuff.
+
 You can do whatever you want, that is a bézier curve there, if I click on this now.  Those that you can see all up and down the control points and those are what shapes it.
+
 Yes, so, how do they work?  Well here is where it goes to the maths bit! (LAUGHTER).  So, hopefully this will come up.  Yes.  No!
+
 It is based on something called the Berstein... polynomial ... the T as the increases over time ... so, this, you can't see it but it draws out, sort of shows how the control points can be reduced to draw it.
+
 (APPLAUSE).
+
 Yes.  So this image here sort of shows how the control points are used to help sketch out the curves you can see as it increases it goes increases goes to each point and stretches it out.  Very simply I am trying not to confuse you.
+
 But yes.  So, moving on to what I did?  I decided to try and approximate these bézier curves and using an algorithm.  What this does is algorithm takes the control pointings and finds the midpoints and then finds the midpoints of the midpoints and keeps going until you reach some point.  At this point it will draw the curve however I chose to use it an approximation and draw the lines between the mid points so, this is what it will look like, obviously it is very rough.  Yes?  I will get ton why that is in a second because it is basically the more a control points that you have in this curve, the better and approximation of the curve that this algorithm will give because it will have more midpoints to find and more line segments to draw.  You will see a better curve.
+
 So, I decided to try and create this algorithm and use it and so, I made a function here that I focused on the bézier curves, I made a function that take control points and this bit here is just a sort of ... what is control points are, like the X and Y coordinates.  Then next it calculates the midpoints between those, so it takes the X and the Y's of two consecutive points add the both the X's and the Y's divide by two.  Then it does it again for the midpoints found and then once more, down the one point.
+
 After this I used (INAUDIBLE) to plot all of the points that I had and lines between each the first and the last of each generation, I am trying to call it.  So it will do the first control point and then the last control point and then the first of the midpoints and the last and keep going like that.
+
 So, that is what I started off doing.
+
 I then realised it wasn't very, it didn't show the approximation for a cue bit one, I wanted to see if it worked so I decided to extend it for a bézier curve with 5 points and I will hopefully now it will work and I will draw a bézier curve with 5 control points and then put those coordinates in and show you what it does and hopefully, you will be able to see that it is an approximation of the curve.  I will draw a cubit curve.
+
 I will try and translate this using the -- I have to do coordinates to make it work.  I will write this in down here, the first one is, minus 8...
+
 Minus 8, 8.
+
 Then the next.
+
 So there are the control points, the first control point was minus 8, 8, then the second one is minus 6, minus 4.  And then the next one is, I will call that the 2, 8.  Then 2, 1.5.
+
 Then 7, 3.
+
 So, from this, hopefully, sometimes it takes a while to load.  So bear with me.
+
 Okay so.  This is the approximation that my algorithm has given.  So you can see it is a rough approximation, it has the right kind of shape and it looks like on a really rough basis.  So, yeah it works, awesome.
+
 So.  I have already mentioned how you can get better approximations of the curves by using more line segments and stuff.  However I notice that whenever I wanted to try and do a curve with more control points to get a better approximation, I couldn't because I would have to keep extending my curve, it was very badly written and inefficient because I couldn't do it as many points as I wanted.
+
 So what I have been trying to do recently and it is not complete yet, I am in the middle of exams.  I have been trying to write a function that using an end number of points and it will still work out.  So this is the code for this.  Input a list of points as X and Y coordinates that is before, so however many coordinate points you have on that, it takes the X part and the Y part and adds those to a list and then it will plot those X and Y points.  Then after that.  It will however many X and Y values there are, it will take the first X value and the consecutive X value in that list and then find out the midpoint then add those as coordinates to another list of midpoints which will then plot.  So, I am going the show you that as well.  Hopefully that works as well.
+
 I will just use; I have got some points in there already.  I think I have got 8 control points there, so I will just run that.  Show you what it does.
+
 Okay, so you can see that it has got in red are the control points and in blue are the midpoints and you can see that there aren't any lines or anything there, that is because I haven't got yet to the point where it keeps finding the midpoints, I haven't got it to take the midpoints of the midpoints, that is the next step.  I am on the way there.  That is good.  Then, that is the end.  I would have on the screen my e-mail address if you wanted to contact me and I link to I have got all the files on-line.  So if you wanted to, you can down load those, I have put the piece of course work on there in case you wanted to read it.  That is it, thank you very much.  (APPLAUSE).
+
 VINCE:  A tremendous well done in dealing with a situation, you did exceptionally well.  Any questions to ask for Rhiannon?
+
 FROM THE FLOOR:  I don't know much about the bézier curves but what is the motivation behind using ... as oppose to using splining?
+
 RHIANNON TITCOMB:  I don't know much about anything about splining.  For me I wanted to use it from a mathematical point of view, which is interesting, as a maths student my work focuses on that.  In terms of why it would be a good way of producing it?  I don't really know.  I think it is you can use it to draw, draw the curve ifs you implemented the (INAUDIBLE) I mentioned but I don't know if that is the most traditional way of doing it.  It is a way as of a maths student I thought it would be a good way to take that.  VINCE:  Anymore questions?  Let's thank Rhiannon again.
+
 (APPLAUSE).
+
 DANIELE PROCIDA:	 If you would like to find some nice fresh cold water for your bottles go back through the foyer where you came in where all the sponsors have set up and in the corridor just off there is the restaurant and at the back of the restaurant is the water cooler so we'll get some more signs out as soon as we find some tape.

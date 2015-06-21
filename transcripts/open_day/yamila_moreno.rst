@@ -2,46 +2,86 @@
 Yamila Moreno: Lessons learned
 ==============================
 
-
 NEW SPEAKER:  Okay, the next talk is by Yamila, Ten lessons learned during the a big Django project.  (APPLAUSE).
+
 YAMILA MORENO:  Thank you for coming to this talk.  As I said, it is about ten lessons I learned in the Django project.  My name is Yamila, this is my twitter and any other resources I work Kaleidos. So this talk about the good and the bad decisions we make in our big project built in Django, it was a complete renovation of our website, roadmaps, meant for all of you who have facing a big project for the first time or maybe starting with web development if you have working with Django for a while now, you h identify issues and the questions and other things.
+
 So it was a traditional brand with roadmaps relating to our massive oil company in Spain and we had to, to repeal the brand and it was traditional brand we needed to keep the essence, so it was quite difficult.  We decided to focus on five main features were to tourist, gastronomic cards, search engine, power map, planner, editorial content.  So how big was it?  We had to handle eighteen thousand cards, this among is data is not big if you any of the big data stuff, we had to show all the cards in a map at the time.  It was hard.  Firstly, took about 18 months then took time transferring., so today, continues to evolve.
+
 So, the original team was formed by two user experience one designer, one front end, six back end.  I was part of the back end team.  As well, managers, relation team, the marketing, so, lots of we had to take on board lots of different opinion to do the platform and as we were, we had this system, two weeks, so we had forty sprints, six hundred US's and thirteen hundred points.
+
 With all of this, this was a project.  One of the first things that you have to think about whether the project is big or is small is about the architecture, when you have a small project you can keep the proposed architecture of Django, with the back and the front coupled but a bigger project as the former speaker talk, will face a new challenges and bigger challenges and which will require a stronger foundations.  For instance, in (NAME - INAUDIBLE) we are starting to develop the project and six months later, we were asked to make, mobile version applications, mobile applications, export the data to other applications and we were unprepared we needed to make a lot of changes to go the new requirements so the lesson one would be completely separate API and front projects.  The API is stable and the front projects are changing every day.
+
 Apart from the architecture, there are also places you have to be ready, so you need to make it ready for any new requirements for instance, we had to integrate the Google API, Google maps API so took this and isolated in our different group and two months later, we changing all the maps API because we can.  So we just needed to change in this module.  So, we thought of course that the effort was worth it.  But, with great power it comes great responsibility.  The everything, factor in everything, in the way of the dead lines of the project or in the weight of being paid working with the team.  So the lesson two would be ready for changes but don't over-engineer.  It is difficult and useful for these to use some rules and, my rules refactor and abstract the second time you have the chance.  If you are working, you have to, within the method you are working on, but the next time, refactor the method.  This allows you to refactor.
+
 So quick survey, raise your hands all of you who know about the loss of thermodynamics so, laws of thermodynamics, now rise your hands if you know the fifth law of thermodynamic  yes, I was expecting that, it is common to forget these very important law which says sooner rather than later you will make a bug! it is not me, it is the dynamics.
+
 Being that true, the lesson is quite easy, test, test, test. The key is that if in a big project many people are committing to the call.  So you need to be sure that your changes won't affect the behaviour of the application.  So you need test.  You need to know that your future changes won't affect the previous behaviour, so you need to test.
+
 In, we wrote tests but not many.  Not disaster, but with some of the changes something or adding new features because there are dragons, we didn't trust ourself, which is normal.  So says you have in Python you have a specialised framework you have to know about knocking, stabbing, spies you need lots of resources to make your application.  Testing, you need to test the application.
+
 One of the most powerful resources when you are working with Django is the community.  In the community you have lots of libraries, big and small.  You have I think I counted more than a thousands.  So, some of them are probably famous Django framework, request, CMS we use all of them.  In as well as in smaller libraries.  All the resources help you achieve one important goal which is not reinventing the wheel.  Sometimes the library is too big and, very little part or sometimes the library doesn't do exactly what you need or maybe you need the absolute control.
+
 So in those cases, you can take advantage of the adjustment of the flexibility of the power of the Django, and Python.  You just need to know the internals and do it yourself whenever it is needed.  It is difficult to know when to use the resource or when to do it yourself.  In the map, we need everything with the map we didn't found any library who could deal with the front with eight thousand cards which were points of interest.  So we needed to class them in the back end and then show in the map the, for instance, the literal content was made with Django CMS as it is open-source, we used at the base and made some widgets and we changed some functionality, there is no one answer but just to try to be aware of the context and change the approach.
+
 Besides the, there is about, the project when you are working in a big team, for me, it is 5 people is a big team because everyone is changing.  You should follow some good practices for instance, this, use a distributed source control manager.  If you have been working with, you know this, but if you are starting you don't know you really need this., (NAME - INAUDIBLE) so ...
+
 But, whatever you are doing, you need to use it.  For us the lesson was not to use the source control but to add the widget to our work flow, so we started to use requests as the basic request to have procedure, so we created a brand, then develop anything there and then when we felt comfortable with the code, the test and the recommendation we made a request.  This request would be reviewed by another colleague who would so, this colleague needed to understand, to test the code and make a widget or maybe accept a request, at least two people reviewing the code before adding to master brands which means like going the production.
+
 So use pull requests as the basic procedure to add features to master.  We thought it would save time in overheads.  We, we were making better code for the very beginning thanks to this rule.
+
 Very often overlooked issue is documentation.  But in a big project you, even in a small project but a big project needs to be documented and well documented.  But the lesson, so, you need, in my opinion in my experience it is important to have two different interpretation, one is meant for the developer who is are going the deal with the deployment and the API for those consuming the data and they are so worried about requests and responses, and something like that.
+
 But the lesson is not only documentation which is important but documentation driven development.  The first thing we do, to write the documentation to agree with the front team which are the first steps consuming our API and then once agreed, we could do the implementation, similar to the sign by contract but focused on a higher level and it worked very good for us.
+
 Then finally the ten lesson, when you are working with Django, you are using and you are clever because you know about thermodynamics you are using the open-source resources.  These resources make your code better, make your life happier.  So, it is important to give back something to the system to keep it alive to keep it growing.  You have lots of many ways to make as much open-source as you can.  You can report a bug.  You know how to report abnormality issue now.  You can fix a bug, you can write a tutorial, you can just help someone, you can release a library and for instance in Kaleidos where we work, all the customer haves to agree that we are going to release code.  From the development, from the project.  Also in Capacity we have our own project and we are very gad and proud to share with the community.  If we want to share it and not be ashamed of our code.  More important we want the community to work with us, we want to make it easy, for that we need to follow those rules and many, many other rules.  So anyone can run a test and they know they are doing things okay, they can read the recommendation and they know and they can understand everything, so, so it would be easy to make the system grow.
+
 [baby crying], he doesn't like to ...
+
 Yes., beside the ... you can think about many, many more rules, maybe you think all of these apply to a project and they do, think about Django and the community and the research and the recommendation, you can maybe approach to make the platform or the project or whatever much better.
+
 I think that is it.  Any questions?
+
 (APPLAUSE).
+
 FROM THE FLOOR:  How do you decide that a piece of software can go open-source for a project?
+
 YAMILA MORENO:  From my company point of view, two ways, the first is if I am using Django's framework I can then use my working time to improve the Django's framework on so this will be the first thing.  It is in the my spare time, my project is taking advantage, so I can put my effort my working effort and the second one is we prepare the code to have libraries.  So I can make an agnostic library, my project can use the library but not release it.  If you can't release on the project it is, the most important sorry, the most big, the biggest way to share.
+
 RUSSELL KEITH-MAGEE:  Actually following up on that, can you, have you got any experience with, any advice or experience with convincing clients that it is okay to work with the code., it isn't hard to convince someone to say it is a free library, when we build your project we are going the open-source a large part of it.  A lot of companies get nervous you are going to give away secrets.
+
 YAMILA MORENO:  The contract for us is mandatory, you are working with us, if you don't agree to this, this point because we are an open-source company, so, it is a basis.  We, the code that we make belongs to the customer, so, the critical points of the business logic belongs to the customer, but we are making, need a special authentication and we make a special library for this or we make some extensive library that is not about the logic.  We release it and they agree, they are very happy with this because usually when you are going the set a contract with us, they know us, they know what we do and they really like to be part of it.
+
 Maybe coolness for them.
+
 NEW SPEAKER:  Was going to ask, so when you have got deadlines looming and you have to work faster and faster, and fleshing things out, what gets cut of the best practices, documentation, practice?  What can go?
+
 YAMILA MORENO:  Thank you for that question! (LAUGHTER).
+
 NEW SPEAKER:  I am the awkward client.
+
 YAMILA MORENO:  We call it the hour of the brave where we stop doing tests.  Thank you!
+
 No really, usually we just come to agreement with the customer, okay we will have this, this next release for you but the next two weeks are for us.  We have, we are writing rubbish and we need to rewrite it.  So that really is, we will fill the, we will accomplish the dead line but then you owe us two weeks or whatever to rewrite properly.  So, it depends and documentation it is for us, for me at least is the most difficult thing to do because I don't like it!
+
 NEW SPEAKER:  So the technical dep, but you need to  -- find any issues, explain that to clients sometimes?
+
 YAMILA MORENO:  Yes.  Not only that because we also have developed a little project also in Django, which we call ... (NAME - INAUDIBLE) whatever we increase our technical depth we put a monster in our, in the dungeon, so the client can see how it is growing this.  So it is a nasty thing, if you want to clean this dungeon, you need to give us some time but the customer also has a word in the decision.
+
 NEW SPEAKER:  How do you deal with situations where you will only need to use some of an external API for example, so you build a small library that could be open-sourced but it doesn't do all of the things that other people might want to do.  In my experience a lot of developers are nervous to open-source that handle 10% of the API, they think they will get complaints from the community it is not good enough.
+
 YAMILA MORENO:  I know, I mean you can go into ... maybe the 80% libraries that you need for once or twice and hopefully someone can take advantage of this and whenever it is possible we try to make it agnostic and useful but it is not always possible.
+
 NEW SPEAKER:  You would say release it rather than sit on it?
+
 YAMILA MORENO:  You don't need to take with us, if by chances, from anyone, take it.
+
 NEW SPEAKER:  How do you make sure that your internal documentation stays up to date with the code you are writing?
+
 YAMILA MORENO:  What happened with you?  This is my first talk ever ... (LAUGHTER).
+
 There are some ways, you can know, I can be sure but for instance, we also do refactor documentation, we take the time to review the documentation, for us, a very important resource is to add a new member of the team so, take the documentation and see how far can you get?  So, when he is, from he or she is a start okay, my documentation starts because always it is the documentation, it is not the developer.  Most, 90% of the time is that I wrote something not clear enough or something like that.  But, you have to refactor also your recommendation.
+
 DANIELE:  Thank you.
+
 So, just a reminder that lunch will be available until 2.30.  Stay for the next talk and then we'll take a break for lunch from here.  Unless you have an appointment booked with a workshop soon after lunch in which case you might need to go now.  Lunch available until 2.30.
